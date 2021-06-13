@@ -1,0 +1,21 @@
+[{
+    "product_id": 1,
+    "product_name": "Sony PS4 Controller Dualshock 4 Wireless Game Pad - Red Camon",
+    "product_description": "The DualShock 4 Wireless Controller features familiar controls, and incorporates several innovative features to usher in a new era of interactive experiences. Its definitive analog sticks and trigger buttons have been improved for greater feel and sensitivity. A multi touch, clickable touch pad expands gameplay possibilities, while the incorporated light bar in conjunction with the PlayStation Camera allows for easy player identification and screen adjustment when playing with friends in the same room. The addition of the Share button makes utilizing the social capabilities of the PlayStation 4 as easy as the push of a button. The DualShock 4 Wireless Controller is more than a controller; it's your physical connection to a new era of gaming. Pair your controller you will need to pair your controller when you use it for the first time and when you use it with another PS4 system. Turn on the PS4 system and connect the controller with the USB cable to complete device pairing charging your controller With the PS4 system turned on or in rest mode, connect your controller using the USB cable.",
+    "category": "Gaming",
+    "unit_price": 2000,
+    "product_rating": 4,
+    "units_in_stock": 50,
+    "units_in_order": 2,
+    "date_added": "12 June 2021",
+    "last_update": "12 June 2021",
+    "added_by": 2,
+    "product_image": "https://source.unsplash.com/1900x700/weekly?controller",
+    "product_gallery": [
+        21,
+        22,
+        42,
+        54
+    ]
+
+}]

@@ -2,6 +2,10 @@ function Redirect() {
   window.location.href = "../../template/Pages/Order_Single.html";
 }
 
+function RedirectInventory() {
+  window.location.href = "../../template/Pages/Inventory_Single.html";
+}
+
 $(document).ready(function () {
   "use strict";
 
@@ -36,7 +40,7 @@ $(document).ready(function () {
           "<td class='order-item'>" +
           val.date_ordered +
           "</td>" +
-          "</td>";
+          "</tr>";
 
         display.append(div);
       });
@@ -78,10 +82,53 @@ $(document).ready(function () {
           "<td>" +
           total +
           "</td>" +
-          "</td>";
+          "</tr>";
 
         display.append(div);
       });
+    },
+  });
+
+  $.ajax({
+    type: "GET",
+    url: "../../template/Data/Products.json",
+    success: function (result) {
+      var product = result;
+      var display = $("#inventory-list");
+
+      $.each(product, function (key, val) {
+        var div;
+        div =
+          "<tr onclick='RedirectInventory()'>" +
+          "<td>" +
+          val.product_id +
+          "</td>" +
+          "<td>" +
+          val.product_name +
+          "</td>" +
+          "<td>" +
+          val.category +
+          "</td>" +
+          "<td>" +
+          val.unit_price +
+          "</td>" +
+          "<td>" +
+          val.units_in_stock +
+          "</td>" +
+          "<td>" +
+          val.units_in_order +
+          "</td>" +
+          "<td>" +
+          val.date_added +
+          "</td>" +
+          "</tr>";
+
+        display.append(div);
+      });
+
+      if (product.length > 0) {
+        jQuery("#inventory-table").DataTable();
+      }
     },
   });
 });
