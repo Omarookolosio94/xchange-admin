@@ -254,6 +254,15 @@
                   <div class="card-body">
                     <div class="card-title d-flex justify-content-between">
                       <p>Product Id: #1</p>
+                      <button
+                        href="#"
+                        class="btn btn-outline-primary btn-sm"
+                        data-toggle="modal"
+                        data-target="#product_modal_name"
+                        style="border-radius: 0"
+                      >
+                        Update
+                      </button>
                     </div>
                     <div class="row">
                       <div class="col-12 mb-4">
@@ -318,9 +327,10 @@
                         href="#"
                         class="btn btn-outline-primary btn-sm"
                         data-toggle="modal"
-                        data-target="#exampleModal"
+                        data-target="#product_modal_detail"
+                        style="border-radius: 0"
                       >
-                        Update Product
+                        Update
                       </button>
                     </div>
                     <div class="row">
@@ -385,7 +395,7 @@
                   <div class="card-body">
                     <p class="card-title">Customer Reviews</p>
                     <ul class="icon-data-list">
-                      <li>
+                      <li style="margin-bottom: 2rem">
                         <div class="d-flex">
                           <img
                             src="https://source.unsplash.com/40x40/weekly?cartoon"
@@ -399,14 +409,30 @@
                             <p class="mb-0">
                               Sales dashboard have been created.
                             </p>
-                            <small>2 June 2021,9:30 am</small>
+
+                            <div
+                              class="
+                                d-flex
+                                justify-content-between
+                                align-items-center
+                                mt-2
+                              "
+                            >
+                              <small>2 June 2021,9:30 am</small> <br />
+                              <button
+                                class="btn btn-danger btn-sm border-radius-none"
+                                style="border-radius: 0"
+                              >
+                                Delete
+                              </button>
+                            </div>
                           </div>
                         </div>
                       </li>
-                      <li>
+                      <li style="margin-bottom: 2rem">
                         <div class="d-flex">
                           <img
-                            src="https://source.unsplash.com/40x40/weekly?user"
+                            src="https://source.unsplash.com/40x40/weekly?cartoon"
                             alt="user"
                           />
                           <div>
@@ -417,7 +443,23 @@
                             <p class="mb-0">
                               Sales dashboard have been created.
                             </p>
-                            <small>2 June 2021,9:30 am</small>
+
+                            <div
+                              class="
+                                d-flex
+                                justify-content-between
+                                align-items-center
+                                mt-2
+                              "
+                            >
+                              <small>2 June 2021,9:30 am</small> <br />
+                              <button
+                                class="btn btn-danger btn-sm border-radius-none"
+                                style="border-radius: 0"
+                              >
+                                Delete
+                              </button>
+                            </div>
                           </div>
                         </div>
                       </li>
@@ -462,20 +504,20 @@
     <!-- Modal -->
     <div
       class="modal fade"
-      id="exampleModal"
+      id="product_modal_name"
       tabindex="-1"
       role="dialog"
-      aria-labelledby="exampleModalLabel"
+      aria-labelledby="product_modal_name"
       aria-hidden="true"
     >
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h3
-              class="font-weight-500 mb-xl-4 text-primary"
-              id="exampleModalLabel"
+              class="font-weight-500 text-primary"
+              id="product_modal_name_label"
             >
-              Update Status
+              Update
             </h3>
             <button
               type="button"
@@ -488,17 +530,45 @@
           </div>
           <div class="modal-body">
             <div class="form-group">
-              <select
+              <label for="name">Name</label>
+              <input
+                type="text"
                 class="form-control"
-                id="sltAccountStatus"
-                name="sltAccountStatus"
-              >
-                <option value="" selected>Select Status</option>
-                <option value="Placed">Placed</option>
-                <option value="Confirmed">Confirmed</option>
-                <option value="Shipped">Shipped</option>
-                <option value="Delivered">Delivered</option>
-              </select>
+                id="name"
+                placeholder="Enter Product Name"
+              />
+              <small id="" class="form-text text-muted">Required</small>
+            </div>
+
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea
+                class="form-control"
+                id="description"
+                rows="3"
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Image</label>
+              <input type="file" name="img[]" class="file-upload-default" />
+              <div class="input-group col-xs-12">
+                <input
+                  type="text"
+                  class="form-control file-upload-info"
+                  disabled=""
+                  placeholder="Upload Image"
+                />
+                <span class="input-group-append">
+                  <button
+                    class="file-upload-browse btn btn-primary"
+                    type="button"
+                    style="border-radius: 0"
+                  >
+                    Upload
+                  </button>
+                </span>
+              </div>
             </div>
           </div>
           <div class="modal-footer">
@@ -506,16 +576,106 @@
               type="button"
               class="btn btn-outline-primary"
               data-dismiss="modal"
+              style="border-radius: 0"
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary">
-              Update order status
+            <button
+              type="button"
+              class="btn btn-primary"
+              style="border-radius: 0"
+            >
+              Update
             </button>
           </div>
         </div>
       </div>
     </div>
+
+    <div
+      class="modal fade"
+      id="product_modal_detail"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="product_modal_detail"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3
+              class="font-weight-500 text-primary"
+              id="product_modal_detail_label"
+            >
+              Update
+            </h3>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="">In Stock</label>
+              <input
+                class="form-control"
+                type="number"
+                placeholder="125"
+                readonly
+              />
+            </div>
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-7">
+                  <label for="units_in_stock">Add To Stock</label>
+                  <input type="number" class="form-control" placeholder="1" />
+                </div>
+
+                <div class="col">
+                  <label for="price">Unit Price (₦)</label>
+                  <input type="number" class="form-control" />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="category">Category</label>
+              <select class="custom-select" required>
+                <option value="">Select</option>
+                <option value="" selected>Accessories</option>
+                <option value="">Monitors</option>
+                <option value="">Wears</option>
+              </select>
+              <div class="invalid-feedback">
+                Example invalid custom select feedback
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-primary"
+              data-dismiss="modal"
+              style="border-radius: 0"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              style="border-radius: 0"
+            >
+              Update
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
       integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
