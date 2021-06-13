@@ -9,9 +9,16 @@
     "city": "Ebute Metta",
     "state": "Lagos",
     "postal_code": "0981",
-    "item_ordered": [{
-        "item_id": 19,
+    "product_ordered": [{
+        "product_id": 19,
         "name": "PS4 Adapter",
+        "description": "Dual controller with shock absorber comes with a charger",
+        "unit_price": 3000,
+        "quantity": 2
+    }, {
+        "product_id": 19,
+        "name": "PS4 Adapter",
+        "description": "Dual controller with shock absorber comes with a charger",
         "unit_price": 3000,
         "quantity": 2
     }],
