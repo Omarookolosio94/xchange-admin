@@ -1,13 +1,13 @@
 function Redirect() {
-  window.location.href = "../../template/Pages/Order_Single.html";
+  window.location.href = "../Pages/Order_Single.html";
 }
 
 function RedirectUser() {
-  window.location.href = "../../template/Pages/Users_Single.html";
+  window.location.href = "../Pages/Users_Single.html";
 }
 
 function RedirectInventory() {
-  window.location.href = "../../template/Pages/Inventory_Single.html";
+  window.location.href = "../Pages/Inventory_Single.html";
 }
 
 $(document).ready(function () {
@@ -17,7 +17,7 @@ $(document).ready(function () {
 
   $.ajax({
     type: "GET",
-    url: "../../template/Data/Orders.json",
+    url: "../Data/Orders.json",
     success: function (result) {
       item = result;
       var display = $("#order-list");
@@ -57,7 +57,7 @@ $(document).ready(function () {
 
   $.ajax({
     type: "GET",
-    url: "../../template/Data/Orders.json",
+    url: "../Data/Orders.json",
     success: function (result) {
       var product = result;
 
@@ -95,7 +95,7 @@ $(document).ready(function () {
 
   $.ajax({
     type: "GET",
-    url: "../../template/Data/Products.json",
+    url: "../Data/Products.json",
     success: function (result) {
       var product = result;
       var display = $("#inventory-list");
@@ -138,7 +138,7 @@ $(document).ready(function () {
 
   $.ajax({
     type: "GET",
-    url: "../../template/Data/Users.json",
+    url: "../Data/Users.json",
     success: function (result) {
       var user = result;
       var display = $("#users-list");
@@ -180,7 +180,7 @@ $(document).ready(function () {
 
   $.ajax({
     type: "GET",
-    url: "../../template/Data/Audit.json",
+    url: "../Data/Audit.json",
     success: function (result) {
       var log = result;
       var display = $("#audit-log-list");
@@ -219,7 +219,7 @@ $(document).ready(function () {
 
   $.ajax({
     type: "GET",
-    url: "../../template/Data/Error.json",
+    url: "../Data/Error.json",
     success: function (result) {
       var log = result;
       var display = $("#error-log-list");
@@ -253,7 +253,7 @@ $(document).ready(function () {
 
   $.ajax({
     type: "GET",
-    url: "../../template/Data/Location.json",
+    url: "../Data/Location.json",
     success: function (result) {
       var location = result;
       var display = $("#rate-list");
@@ -281,7 +281,7 @@ $(document).ready(function () {
           val.updated_at +
           "</td>" +
           "<td>" +
-          "<button class='btn btn-primary py-2' style='border-radius:0;' data-toggle='modal' data-target='#rate-update-modal'>Update</button>" +
+          "<button class='btn btn-outline-primary py-2' style='border-radius:0;' data-toggle='modal' data-target='#rate-update-modal'>Update</button>" +
           "</td>" +
           "</tr>";
 

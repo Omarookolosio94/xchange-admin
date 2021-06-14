@@ -261,13 +261,13 @@
                 </nav>
               </div>
             </div>
-
+            <!--
             <div class="row">
               <div class="col-md-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
                     <div class="card-title d-flex justify-content-between">
-                      <p>Update Rate</p>
+                      <p>Add Rate</p>
                     </div>
                     <div class="row">
                       <div class="col-12">
@@ -304,15 +304,48 @@
                           </div>
 
                           <div class="form-group">
-                            <div class="form-check">
+                            <label for=""
+                              >Do you intend to start shipping to this
+                              Location?</label
+                            >
+                            <br />
+                            <div
+                              class="
+                                custom-control
+                                custom-radio
+                                custom-control-inline
+                              "
+                            >
                               <input
-                                class="form-check-input"
-                                type="checkbox"
-                                style="margin: 0"
+                                type="radio"
+                                id="customRadioInline1"
+                                name="customRadioInline1"
+                                class="custom-control-input"
                               />
-                              <label class="form-check-label" for="gridCheck">
-                                Deliver To
-                              </label>
+                              <label
+                                class="custom-control-label"
+                                for="customRadioInline1"
+                                >True</label
+                              >
+                            </div>
+                            <div
+                              class="
+                                custom-control
+                                custom-radio
+                                custom-control-inline
+                              "
+                            >
+                              <input
+                                type="radio"
+                                id="customRadioInline2"
+                                name="customRadioInline1"
+                                class="custom-control-input"
+                              />
+                              <label
+                                class="custom-control-label"
+                                for="customRadioInline2"
+                                >False</label
+                              >
                             </div>
                           </div>
 
@@ -321,7 +354,7 @@
                             class="btn btn-primary"
                             style="border-radius: 0"
                           >
-                            Update Rate
+                            Add Rate
                           </button>
                         </form>
                       </div>
@@ -330,6 +363,7 @@
                 </div>
               </div>
             </div>
+          -->
 
             <div class="row">
               <div class="col-md-12 grid-margin stretch-card">
@@ -469,18 +503,35 @@
             </div>
 
             <div class="form-group">
-              <div class="form-check">
+              <label for=""
+                >Do you intend to start shipping to this Location?</label
+              >
+              <br />
+              <div class="custom-control custom-radio custom-control-inline">
                 <input
-                  class="form-check-input"
-                  type="checkbox"
-                  style="margin: 0"
+                  type="radio"
+                  id="customRadioInline1"
+                  name="customRadioInline1"
+                  class="custom-control-input"
                 />
-                <label class="form-check-label" for="gridCheck">
-                  Deliver To
-                </label>
+                <label class="custom-control-label" for="customRadioInline1"
+                  >True</label
+                >
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input
+                  type="radio"
+                  id="customRadioInline2"
+                  name="customRadioInline1"
+                  class="custom-control-input"
+                />
+                <label class="custom-control-label" for="customRadioInline2"
+                  >False</label
+                >
               </div>
             </div>
           </div>
+
           <div class="modal-footer">
             <button
               type="button"
