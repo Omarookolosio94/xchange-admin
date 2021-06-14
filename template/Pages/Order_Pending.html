@@ -188,7 +188,7 @@
               <div class="collapse" id="delivery">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
-                    <a class="nav-link" href="Delivery.html">Rates</a>
+                    <a class="nav-link" href="Delivery_Rate.html">Rates</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="Delivery_Track.html">Track</a>
@@ -221,16 +221,27 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Logs_Audit.html">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="#logs"
+                aria-expanded="false"
+                aria-controls="users"
+              >
                 <i class="icon-bar-graph menu-icon"></i>
-                <span class="menu-title">Audit Log</span>
+                <span class="menu-title">Logs</span>
+                <i class="menu-arrow"></i>
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Logs_Error.html">
-                <i class="icon-bar-graph-2 menu-icon"></i>
-                <span class="menu-title">Error Logs</span>
-              </a>
+              <div class="collapse" id="logs">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="Logs_Audit.html">Audit</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Logs_Error.html">Exception</a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </nav>

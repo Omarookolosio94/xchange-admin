@@ -1,0 +1,16 @@
+[{
+    "location_id": 1,
+    "city": "Mainland",
+    "state": "Lagos",
+    "price": 1000,
+    "delivery_to": true,
+    "updated_at": "14 June 2021"
+}, {
+    "location_id": 2,
+    "city": "Surulere",
+    "state": "Lagos",
+    "price": 1500,
+    "delivery_to": true,
+    "updated_at": "14 June 2021"
+
+}]

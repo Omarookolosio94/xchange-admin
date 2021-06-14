@@ -177,4 +177,120 @@ $(document).ready(function () {
       });
     },
   });
+
+  $.ajax({
+    type: "GET",
+    url: "../../template/Data/Audit.json",
+    success: function (result) {
+      var log = result;
+      var display = $("#audit-log-list");
+
+      $.each(log, function (key, val) {
+        var div;
+        div =
+          "<tr>" +
+          "<td>" +
+          val.audit_id +
+          "</td>" +
+          "<td>" +
+          "<img src=" +
+          val.pic +
+          ">" +
+          "</td>" +
+          "<td>" +
+          val.user_name +
+          "</td>" +
+          "<td>" +
+          val.activity +
+          "</td>" +
+          "<td>" +
+          val.date_added +
+          "</td>" +
+          "</tr>";
+
+        display.append(div);
+      });
+
+      if (log.length > 0) {
+        jQuery("#log-table").DataTable();
+      }
+    },
+  });
+
+  $.ajax({
+    type: "GET",
+    url: "../../template/Data/Error.json",
+    success: function (result) {
+      var log = result;
+      var display = $("#error-log-list");
+
+      $.each(log, function (key, val) {
+        var div;
+        div =
+          "<tr>" +
+          "<td>" +
+          val.exception_id +
+          "</td>" +
+          "<td>" +
+          val.action +
+          "</td>" +
+          "<td>" +
+          val.exception +
+          "</td>" +
+          "<td>" +
+          val.date_added +
+          "</td>" +
+          "</tr>";
+
+        display.append(div);
+      });
+
+      if (log.length > 0) {
+        jQuery("#error-log-table").DataTable();
+      }
+    },
+  });
+
+  $.ajax({
+    type: "GET",
+    url: "../../template/Data/Location.json",
+    success: function (result) {
+      var location = result;
+      var display = $("#rate-list");
+
+      $.each(location, function (key, val) {
+        var div;
+        div =
+          "<tr>" +
+          "<td>" +
+          val.location_id +
+          "</td>" +
+          "<td>" +
+          val.city +
+          "</td>" +
+          "<td>" +
+          val.state +
+          "</td>" +
+          "<td>" +
+          val.price +
+          "</td>" +
+          "<td>" +
+          val.delivery_to +
+          "</td>" +
+          "<td>" +
+          val.updated_at +
+          "</td>" +
+          "<td>" +
+          "<button class='btn btn-primary py-2' style='border-radius:0;' data-toggle='modal' data-target='#rate-update-modal'>Update</button>" +
+          "</td>" +
+          "</tr>";
+
+        display.append(div);
+      });
+
+      if (location.length > 0) {
+        jQuery("#rate-table").DataTable();
+      }
+    },
+  });
 });
