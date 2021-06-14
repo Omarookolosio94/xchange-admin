@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>XChange | User_Single</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../vendors/feather/feather.css" />
+    <link rel="stylesheet" href="../vendors/ti-icons/css/themify-icons.css" />
+    <link rel="stylesheet" href="../vendors/css/vendor.bundle.base.css" />
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link
+      rel="stylesheet"
+      href="../vendors/datatables.net-bs4/dataTables.bootstrap4.css"
+    />
+    <link rel="stylesheet" href="../vendors/ti-icons/css/themify-icons.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../js/select.dataTables.min.css"
+    />
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../css/vertical-layout-light/style.css" />
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../images/favicon.png" />
+  </head>
+
+  <body>
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div
+          class="
+            text-center
+            navbar-brand-wrapper
+            d-flex
+            align-items-center
+            justify-content-center
+          "
+        >
+          <a class="navbar-brand brand-logo mr-5" href="../index.html"
+            ><img
+              src="../images/xchange_brand_color.svg"
+              class="mr-2"
+              alt="logo"
+          /></a>
+          <a class="navbar-brand brand-logo-mini" href="../index.html"
+            ><img src="../images/xchange_brand_color.svg" alt="logo"
+          /></a>
+        </div>
+        <div
+          class="
+            navbar-menu-wrapper
+            d-flex
+            align-items-center
+            justify-content-end
+          "
+        >
+          <button
+            class="navbar-toggler navbar-toggler align-self-center"
+            type="button"
+            data-toggle="minimize"
+          >
+            <span class="icon-menu"></span>
+          </button>
+
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item nav-profile dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-toggle="dropdown"
+                id="profileDropdown"
+              >
+                <img src="../images/faces/face28.jpg" alt="profile" />
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                aria-labelledby="profileDropdown"
+              >
+                <a href="Users_Single.html" class="dropdown-item">
+                  <i class="ti-user text-primary"></i>
+                  Profile
+                </a>
+                <a class="dropdown-item" href="login.html">
+                  <i class="ti-power-off text-primary"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+          </ul>
+          <button
+            class="
+              navbar-toggler navbar-toggler-right
+              d-lg-none
+              align-self-center
+            "
+            type="button"
+            data-toggle="offcanvas"
+          >
+            <span class="icon-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">
+                <i class="icon-grid menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
+              </a>
+            </li>
+            <!--
+
+              <li class="nav-item">
+                <a class="nav-link" href="Customer.html">
+                  <i class="icon-head menu-icon"></i>
+                  <span class="menu-title">Customers</span>
+                </a>
+              </li>
+            -->
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="#orders"
+                aria-expanded="false"
+                aria-controls="orders"
+              >
+                <i class="icon-stack-2 menu-icon"></i>
+                <span class="menu-title">Orders</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="orders">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="Order_Pending.html">Pending</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Order_All.html">All</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="#inventory"
+                aria-expanded="false"
+                aria-controls="inventory"
+              >
+                <i class="icon-layers menu-icon"></i>
+                <span class="menu-title">Inventory</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="inventory">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="Inventory.html">Items</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Inventory_Manage.html">Manage</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="#delivery"
+                aria-expanded="false"
+                aria-controls="delivery"
+              >
+                <i class="icon-reply menu-icon"></i>
+                <span class="menu-title">Delivery</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="delivery">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="Delivery.html">Rates</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Delivery_Track.html">Track</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="#users"
+                aria-expanded="false"
+                aria-controls="users"
+              >
+                <i class="icon-image menu-icon"></i>
+                <span class="menu-title">Users</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="users">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="Users_List.html">List</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Users_Manage.html">Manage</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Logs_Audit.html">
+                <i class="icon-bar-graph menu-icon"></i>
+                <span class="menu-title">Audit Log</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Logs_Error.html">
+                <i class="icon-bar-graph-2 menu-icon"></i>
+                <span class="menu-title">Error Logs</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="row">
+              <div class="col-12 transparent">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb grid-margin">
+                    <li class="breadcrumb-item">User</li>
+                    <li class="breadcrumb-item" aria-current="page">Details</li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                      #12
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="card-title d-flex justify-content-between">
+                      <p>User Id: #12</p>
+                      <button
+                        href="#"
+                        class="btn btn-outline-primary btn-sm"
+                        data-toggle="modal"
+                        data-target="#product_modal_name"
+                        style="border-radius: 0"
+                      >
+                        Update Img
+                      </button>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 mb-4">
+                        <div class="col-lg-6 px-0">
+                          <img
+                            src="https://source.unsplash.com/1900x700/weekly?profile"
+                            class="img-fluid mt-2"
+                            alt="Responsive image"
+                            style="height: 300px; margin: 0"
+                            ;
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="card-title d-flex justify-content-between">
+                      <p>Details</p>
+                      <button
+                        href="#"
+                        class="btn btn-outline-primary btn-sm"
+                        data-toggle="modal"
+                        data-target="#product_modal_detail"
+                        style="border-radius: 0"
+                      >
+                        Update
+                      </button>
+                    </div>
+                    <div class="row">
+                      <div class="col-6 mb-3">
+                        <p class="text-info mb-0 font-weight-bold">
+                          First name
+                        </p>
+                        <p>Oghenemaro</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <p class="text-info mb-0 font-weight-bold">Last Name</p>
+                        <p>Okolosio</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <p class="text-info mb-0 font-weight-bold">Email</p>
+                        <p>omarookolosio94@hotmail.con</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <p class="text-info mb-0 font-weight-bold">
+                          Phone Number
+                        </p>
+                        <p>070 190 694 86</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <p class="text-info mb-0 font-weight-bold">Role</p>
+                        <p>Super Admin</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <p class="text-info mb-0 font-weight-bold">Status</p>
+                        <p class="text-success">Active</p>
+                      </div>
+
+                      <div class="col-6 mb-3">
+                        <p class="text-info mb-0 font-weight-bold">
+                          Date Created
+                        </p>
+                        <p>12 June 2021</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <p class="text-info mb-0 font-weight-bold">
+                          Created By
+                        </p>
+                        <p>#21</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <p class="text-info mb-0 font-weight-bold">
+                          Last Update
+                        </p>
+                        <p>12 June 2021</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <p class="text-info mb-0 font-weight-bold">
+                          Updated By
+                        </p>
+                        <p>#20</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12 stretch-card grid-margin">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="card-title d-flex justify-content-between">
+                      <p>Admin Remark</p>
+                      <button
+                        href="#"
+                        class="btn btn-outline-danger btn-sm"
+                        data-toggle="modal"
+                        data-target="#product_modal_disable"
+                        style="border-radius: 0"
+                      >
+                        Deactivate
+                      </button>
+                    </div>
+
+                    <p>You should upload a clear picture of yourself</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12 stretch-card grid-margin">
+                <div class="card">
+                  <div class="card-body">
+                    <p class="card-title">Delete User- #234</p>
+                    <label for="exampleInputUsername1">
+                      <span class="text-danger"
+                        >Please note this action cannot be reversed</span
+                      ></label
+                    >
+                    <form action="" class="form-inline">
+                      <div class="form-group mr-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          placeholder="input user id"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <button class="btn btn-danger" style="border-radius: 0">
+                          Delete
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+          <footer class="footer">
+            <div
+              class="
+                d-sm-flex
+                justify-content-center justify-content-sm-between
+              "
+            >
+              <span
+                class="
+                  text-muted text-center text-sm-left
+                  d-block d-sm-inline-block
+                "
+                >Copyright © 2021 ,XChange Admin .<a
+                  href="https://www.oghenemaro.com/"
+                  target="_blank"
+                >
+                  Designed by Matrix.
+                </a>
+                All rights reserved.</span
+              >
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="product_modal_name"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="product_modal_name"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3
+              class="font-weight-500 text-primary"
+              id="product_modal_name_label"
+            >
+              Update
+            </h3>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label>Image</label>
+              <input type="file" name="img[]" class="file-upload-default" />
+              <div class="input-group col-xs-12">
+                <input
+                  type="text"
+                  class="form-control file-upload-info"
+                  disabled=""
+                  placeholder="Upload Image"
+                />
+                <span class="input-group-append">
+                  <button
+                    class="file-upload-browse btn btn-outline-primary"
+                    type="button"
+                    style="border-radius: 0"
+                  >
+                    Upload
+                  </button>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-primary"
+              data-dismiss="modal"
+              style="border-radius: 0"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              style="border-radius: 0"
+            >
+              Update
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="product_modal_detail"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="product_modal_detail"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3
+              class="font-weight-500 text-primary"
+              id="product_modal_detail_label"
+            >
+              Update
+            </h3>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="">First Name</label>
+              <input class="form-control" type="text" placeholder="" />
+            </div>
+            <div class="form-group">
+              <label for="">Last Name</label>
+              <input class="form-control" type="text" placeholder="" />
+            </div>
+            <div class="form-group">
+              <label for="">Email</label>
+              <input class="form-control" type="text" placeholder="" />
+            </div>
+            <div class="form-group">
+              <label for="">Phone Number</label>
+              <input class="form-control" type="text" placeholder="" />
+            </div>
+
+            <div class="form-group">
+              <label for="category">Role</label>
+              <select class="custom-select" required>
+                <option value="" selected>Inventory Officer</option>
+                <option value="">Super Admin</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-primary"
+              data-dismiss="modal"
+              style="border-radius: 0"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              style="border-radius: 0"
+            >
+              Update
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="product_modal_disable"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="product_modal_disable"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3
+              class="font-weight-500 text-primary"
+              id="product_modal_name_label"
+            >
+              Deactivate
+            </h3>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="description">Remarks</label>
+              <textarea
+                class="form-control"
+                id="description"
+                rows="3"
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  style="margin: 0"
+                  checked
+                />
+                <label class="form-check-label" for="gridCheck">
+                  Deactivate User
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-primary"
+              data-dismiss="modal"
+              style="border-radius: 0"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              style="border-radius: 0"
+            >
+              Deactivate
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
+    <!-- plugins:js -->
+    <script src="../vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="../vendors/chart.js/Chart.min.js"></script>
+    <script src="../vendors/datatables.net/jquery.dataTables.js"></script>
+    <script src="../vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+    <script src="../js/dataTables.select.min.js"></script>
+
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="../js/off-canvas.js"></script>
+    <script src="../js/hoverable-collapse.js"></script>
+    <script src="../js/template.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/Chart.roundedBarCharts.js"></script>
+    <!-- End custom js for this page-->
+  </body>
+</html>

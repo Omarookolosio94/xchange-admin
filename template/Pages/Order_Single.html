@@ -1,355 +1,578 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title>XChange | Orders_Single</title>
     <!-- plugins:css -->
-    <link rel="stylesheet" href="../vendors/feather/feather.css">
-    <link rel="stylesheet" href="../vendors/ti-icons/css/themify-icons.css">
-    <link rel="stylesheet" href="../vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../vendors/feather/feather.css" />
+    <link rel="stylesheet" href="../vendors/ti-icons/css/themify-icons.css" />
+    <link rel="stylesheet" href="../vendors/css/vendor.bundle.base.css" />
     <!-- endinject -->
     <!-- Plugin css for this page -->
-    <link rel="stylesheet" href="../vendors/datatables.net-bs4/dataTables.bootstrap4.css">
-    <link rel="stylesheet" href="../vendors/ti-icons/css/themify-icons.css">
-    <link rel="stylesheet" type="text/css" href="../js/select.dataTables.min.css">
+    <link
+      rel="stylesheet"
+      href="../vendors/datatables.net-bs4/dataTables.bootstrap4.css"
+    />
+    <link rel="stylesheet" href="../vendors/ti-icons/css/themify-icons.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../js/select.dataTables.min.css"
+    />
     <!-- End plugin css for this page -->
     <!-- inject:css -->
-    <link rel="stylesheet" href="../css/vertical-layout-light/style.css">
+    <link rel="stylesheet" href="../css/vertical-layout-light/style.css" />
     <!-- endinject -->
     <link rel="shortcut icon" href="../images/favicon.png" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container-scroller">
-        <!-- partial:partials/_navbar.html -->
-        <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a class="navbar-brand brand-logo mr-5" href="../index.html"><img
-                        src="../images/xchange_brand_color.svg" class="mr-2" alt="logo" /></a>
-                <a class="navbar-brand brand-logo-mini" href="../index.html"><img
-                        src="../images/xchange_brand_color.svg" alt="logo" /></a>
-            </div>
-            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-                <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-                    <span class="icon-menu"></span>
-                </button>
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div
+          class="
+            text-center
+            navbar-brand-wrapper
+            d-flex
+            align-items-center
+            justify-content-center
+          "
+        >
+          <a class="navbar-brand brand-logo mr-5" href="../index.html"
+            ><img
+              src="../images/xchange_brand_color.svg"
+              class="mr-2"
+              alt="logo"
+          /></a>
+          <a class="navbar-brand brand-logo-mini" href="../index.html"
+            ><img src="../images/xchange_brand_color.svg" alt="logo"
+          /></a>
+        </div>
+        <div
+          class="
+            navbar-menu-wrapper
+            d-flex
+            align-items-center
+            justify-content-end
+          "
+        >
+          <button
+            class="navbar-toggler navbar-toggler align-self-center"
+            type="button"
+            data-toggle="minimize"
+          >
+            <span class="icon-menu"></span>
+          </button>
 
-                <ul class="navbar-nav navbar-nav-right">
-                    <li class="nav-item nav-profile dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-                            <img src="../images/faces/face28.jpg" alt="profile" />
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
-                            aria-labelledby="profileDropdown">
-                            <a href="Users_Single.html" class="dropdown-item">
-                                <i class="ti-user text-primary"></i>
-                                Profile
-                            </a>
-                            <a class="dropdown-item" href="login.html">
-                                <i class="ti-power-off text-primary"></i>
-                                Logout
-                            </a>
-                        </div>
-                    </li>
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item nav-profile dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-toggle="dropdown"
+                id="profileDropdown"
+              >
+                <img src="../images/faces/face28.jpg" alt="profile" />
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                aria-labelledby="profileDropdown"
+              >
+                <a href="Users_Single.html" class="dropdown-item">
+                  <i class="ti-user text-primary"></i>
+                  Profile
+                </a>
+                <a class="dropdown-item" href="login.html">
+                  <i class="ti-power-off text-primary"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+          </ul>
+          <button
+            class="
+              navbar-toggler navbar-toggler-right
+              d-lg-none
+              align-self-center
+            "
+            type="button"
+            data-toggle="offcanvas"
+          >
+            <span class="icon-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">
+                <i class="icon-grid menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
+              </a>
+            </li>
+            <!--
+              
+              <li class="nav-item">
+                <a class="nav-link" href="Customer.html">
+                  <i class="icon-head menu-icon"></i>
+                  <span class="menu-title">Customers</span>
+                </a>
+              </li>
+            -->
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="#orders"
+                aria-expanded="false"
+                aria-controls="orders"
+              >
+                <i class="icon-stack-2 menu-icon"></i>
+                <span class="menu-title">Orders</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="orders">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="Order_Pending.html">Pending</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Order_All.html">All</a>
+                  </li>
                 </ul>
-                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
-                    data-toggle="offcanvas">
-                    <span class="icon-menu"></span>
-                </button>
-            </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="#inventory"
+                aria-expanded="false"
+                aria-controls="inventory"
+              >
+                <i class="icon-layers menu-icon"></i>
+                <span class="menu-title">Inventory</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="inventory">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="Inventory.html">Items</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Inventory_Manage.html">Manage</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="#delivery"
+                aria-expanded="false"
+                aria-controls="delivery"
+              >
+                <i class="icon-reply menu-icon"></i>
+                <span class="menu-title">Delivery</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="delivery">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="Delivery.html">Rates</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Delivery_Track.html">Track</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="#users"
+                aria-expanded="false"
+                aria-controls="users"
+              >
+                <i class="icon-image menu-icon"></i>
+                <span class="menu-title">Users</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="users">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="Users_List.html">List</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Users_Manage.html">Manage</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Logs_Audit.html">
+                <i class="icon-bar-graph menu-icon"></i>
+                <span class="menu-title">Audit Log</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Logs_Error.html">
+                <i class="icon-bar-graph-2 menu-icon"></i>
+                <span class="menu-title">Error Logs</span>
+              </a>
+            </li>
+          </ul>
         </nav>
         <!-- partial -->
-        <div class="container-fluid page-body-wrapper">
-            <nav class="sidebar sidebar-offcanvas" id="sidebar">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">
-                            <i class="icon-grid menu-icon"></i>
-                            <span class="menu-title">Dashboard</span>
-                        </a>
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="row">
+              <div class="col-12 transparent">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb grid-margin">
+                    <li class="breadcrumb-item">Orders</li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                      Details
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Customer.html">
-                            <i class="icon-head menu-icon"></i>
-                            <span class="menu-title">Customers</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#orders" aria-expanded="false"
-                            aria-controls="orders">
-                            <i class="icon-stack-2 menu-icon"></i>
-                            <span class="menu-title">Orders</span>
-                            <i class="menu-arrow"></i>
-                        </a>
-                        <div class="collapse" id="orders">
-                            <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"><a class="nav-link" href="Order_Pending.html">Pending</a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="Order_All.html">All</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#inventory" aria-expanded="false"
-                            aria-controls="inventory">
-                            <i class="icon-layers menu-icon"></i>
-                            <span class="menu-title">Inventory</span>
-                            <i class="menu-arrow"></i>
-                        </a>
-                        <div class="collapse" id="inventory">
-                            <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"><a class="nav-link" href="Inventory.html">Items</a></li>
-                                <li class="nav-item"><a class="nav-link" href="Inventory_Manage.html">Manage</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#delivery" aria-expanded="false"
-                            aria-controls="delivery">
-                            <i class="icon-reply menu-icon"></i>
-                            <span class="menu-title">Delivery</span>
-                            <i class="menu-arrow"></i>
-                        </a>
-                        <div class="collapse" id="delivery">
-                            <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"><a class="nav-link" href="Delivery.html">Rates</a></li>
-                                <li class="nav-item"><a class="nav-link" href="Delivery_Track.html">Track</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#users" aria-expanded="false"
-                            aria-controls="users">
-                            <i class="icon-image menu-icon"></i>
-                            <span class="menu-title">Users</span>
-                            <i class="menu-arrow"></i>
-                        </a>
-                        <div class="collapse" id="users">
-                            <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="Users_List.html">List</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="Users_Single.html">Manage</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Logs_Audit.html">
-                            <i class="icon-bar-graph menu-icon"></i>
-                            <span class="menu-title">Audit Log</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Logs_Error.html">
-                            <i class="icon-bar-graph-2 menu-icon"></i>
-                            <span class="menu-title">Error Logs</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- partial -->
-            <div class="main-panel">
-                <div class="content-wrapper">
-                    <div class="row">
-                        <div class="col-12 transparent">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb grid-margin">
-                                    <li class="breadcrumb-item">Orders</li>
-                                    <li class="breadcrumb-item active" aria-current="page">Details</li>
-                                </ol>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-title d-flex justify-content-between">
-                                        <p>Customer Info</p>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6 mb-3">
-                                            <p class="text-info mb-0 font-weight-bold">Full Name</p>
-                                            <p>Oghenemaro Okolosio</p>
-                                        </div>
-                                        <div class="col-6 mb-3">
-                                            <p class="text-info mb-0 font-weight-bold">Email</p>
-                                            <p>omarookolosio94@gmail.com</p>
-                                        </div>
-                                        <div class="col-6 mb-3">
-                                            <p class="text-info mb-0 font-weight-bold">Phone</p>
-                                            <p>070 190 69486</p>
-                                        </div>
-                                        <div class="col-6 mb-3">
-                                            <p class="text-info mb-0 font-weight-bold">Delivery Address</p>
-                                            <p>48 Vaughan Street Ebute Metta, Lagos</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-title d-flex justify-content-between">
-                                        <p>Order Summary</p>
-                                        <button href="#" class="btn btn-outline-primary btn-sm" data-toggle="modal"
-                                            data-target="#exampleModal">
-                                            Update Status</button>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6 mb-3">
-                                            <p class="text-info mb-0 font-weight-bold">Order Id</p>
-                                            <p>A2450</p>
-                                        </div>
-                                        <div class="col-6 mb-3">
-                                            <p class="text-info mb-0 font-weight-bold">Payment Type</p>
-                                            <p>Cash on Delivery</p>
-                                        </div>
-                                        <div class="col-6 mb-3">
-                                            <p class="text-info mb-0 font-weight-bold">Status</p>
-                                            <p>Order Placed</p>
-                                        </div>
-                                        <div class="col-6 mb-3">
-                                            <p class="text-info mb-0 font-weight-bold">Platform</p>
-                                            <p>Web</p>
-                                        </div>
-                                        <div class="col-6 mb-3">
-                                            <p class="text-info mb-0 font-weight-bold">Shipping Fee</p>
-                                            <p>Free</p>
-                                        </div>
-                                        <div class="col-6 mb-3">
-                                            <p class="text-info mb-0 font-weight-bold">Value</p>
-                                            <p>₦ 50,000</p>
-                                        </div>
-                                        <div class="col-6 mb-3">
-                                            <p class="text-info mb-0 font-weight-bold">Date Ordered</p>
-                                            <p>12 June 2021</p>
-                                        </div>
-                                        <div class="col-6 mb-3">
-                                            <p class="text-info mb-0 font-weight-bold">Date Delivered</p>
-                                            <p>Nil</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-title d-flex justify-content-between">
-                                        <p>Cart</p>
-                                        <a href="#" class="btn btn-outline-primary btn-sm">
-                                            Download Receipt</a>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="table-responsive">
-                                                <table class="display table table-striped table-hover table-borderless"
-                                                    style="width:100%">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Product Id</th>
-                                                            <th>Name</th>
-                                                            <th>Description</th>
-                                                            <th>Unit Price</th>
-                                                            <th>Quantity</th>
-                                                            <th>Total</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody id="cart-list">
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-12 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-title d-flex justify-content-between">
-                                        <p>Remarks</p>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <p>Very commendable of xchange. My order arrived in good condition and was
-                                                delivered on time</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- content-wrapper ends -->
-                <!-- partial:partials/_footer.html -->
-                <footer class="footer">
-                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021
-                            ,XChange Admin
-                            .<a href="https://www.oghenemaro.com/" target="_blank"> Designed by Matrix. </a>
-                            All rights reserved.</span>
-                    </div>
-                </footer>
-                <!-- partial -->
+                  </ol>
+                </nav>
+              </div>
             </div>
-            <!-- main-panel ends -->
+            <div class="row">
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="card-title d-flex justify-content-between">
+                      <p>Customer Info</p>
+                    </div>
+                    <div class="row">
+                      <div class="col-6 mb-3">
+                        <p class="text-info mb-0 font-weight-bold">Full Name</p>
+                        <p>Oghenemaro Okolosio</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <p class="text-info mb-0 font-weight-bold">Email</p>
+                        <p>omarookolosio94@gmail.com</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <p class="text-info mb-0 font-weight-bold">Phone</p>
+                        <p>070 190 69486</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <p class="text-info mb-0 font-weight-bold">
+                          Delivery Address
+                        </p>
+                        <p>48 Vaughan Street Ebute Metta, Lagos</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="card-title d-flex justify-content-between">
+                      <p>Order Summary</p>
+                      <button
+                        href="#"
+                        class="btn btn-outline-primary btn-sm"
+                        data-toggle="modal"
+                        data-target="#exampleModal"
+                        style="border-radius: 0"
+                      >
+                        Update Status
+                      </button>
+                    </div>
+                    <div class="row">
+                      <div class="col-6 mb-3">
+                        <p class="text-info mb-0 font-weight-bold">Order Id</p>
+                        <p>A2450</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <p class="text-info mb-0 font-weight-bold">
+                          Payment Type
+                        </p>
+                        <p>Cash on Delivery</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <p class="text-info mb-0 font-weight-bold">Status</p>
+                        <p>Order Placed</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <p class="text-info mb-0 font-weight-bold">Platform</p>
+                        <p>Web</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <p class="text-info mb-0 font-weight-bold">
+                          Shipping Fee
+                        </p>
+                        <p>Free</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <p class="text-info mb-0 font-weight-bold">Value</p>
+                        <p>₦ 50,000</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <p class="text-info mb-0 font-weight-bold">
+                          Date Ordered
+                        </p>
+                        <p>12 June 2021</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <p class="text-info mb-0 font-weight-bold">
+                          Date Delivered
+                        </p>
+                        <p>Nil</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="card-title d-flex justify-content-between">
+                      <p>Cart</p>
+                      <a
+                        href="#"
+                        class="btn btn-outline-primary btn-sm"
+                        style="border-radius: 0"
+                      >
+                        Download Receipt</a
+                      >
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="table-responsive">
+                          <table
+                            class="
+                              display
+                              table table-striped table-hover table-borderless
+                            "
+                            style="width: 100%"
+                          >
+                            <thead>
+                              <tr>
+                                <th>Product Id</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Unit Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                              </tr>
+                            </thead>
+                            <tbody id="cart-list"></tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="card-title d-flex justify-content-between">
+                      <p>Remarks</p>
+                      <button
+                        href="#"
+                        class="btn btn-outline-primary btn-sm"
+                        data-toggle="modal"
+                        data-target="#order-modal-remark"
+                        style="border-radius: 0"
+                      >
+                        Update
+                      </button>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <p>
+                          Very commendable of xchange. My order arrived in good
+                          condition and was delivered on time
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+          <footer class="footer">
+            <div
+              class="
+                d-sm-flex
+                justify-content-center justify-content-sm-between
+              "
+            >
+              <span
+                class="
+                  text-muted text-center text-sm-left
+                  d-block d-sm-inline-block
+                "
+                >Copyright © 2021 ,XChange Admin .<a
+                  href="https://www.oghenemaro.com/"
+                  target="_blank"
+                >
+                  Designed by Matrix.
+                </a>
+                All rights reserved.</span
+              >
+            </div>
+          </footer>
+          <!-- partial -->
         </div>
-        <!-- page-body-wrapper ends -->
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
     </div>
     <!-- container-scroller -->
 
-
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="font-weight-500 mb-xl-4 text-primary" id="exampleModalLabel">Update Status</h3>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <select class="form-control" id="sltAccountStatus" name="sltAccountStatus">
-                            <option value="" selected>Select Status</option>
-                            <option value="Placed">Placed</option>
-                            <option value="Confirmed">Confirmed</option>
-                            <option value="Shipped">Shipped</option>
-                            <option value="Delivered">Delivered</option>
-
-                        </select>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Update order status</button>
-                </div>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3
+              class="font-weight-500 mb-xl-4 text-primary"
+              id="exampleModalLabel"
+            >
+              Update Status
+            </h3>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="">Order</label>
+              <select
+                class="form-control"
+                id="sltAccountStatus"
+                name="sltAccountStatus"
+              >
+                <option value="" selected>Select Status</option>
+                <option value="Placed">Placed</option>
+                <option value="Confirmed">Confirmed</option>
+                <option value="Shipped">Shipped</option>
+                <option value="Delivered">Delivered</option>
+              </select>
             </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-primary"
+              data-dismiss="modal"
+              style="border-radius: 0"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              style="border-radius: 0"
+            >
+              Update
+            </button>
+          </div>
         </div>
+      </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-        crossorigin="anonymous"></script>
+
+    <div
+      class="modal fade"
+      id="order-modal-remark"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="order-modal-remark"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3
+              class="font-weight-500 text-primary"
+              id="product_modal_name_label"
+            >
+              Update Remark
+            </h3>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="description">Remarks</label>
+              <textarea
+                class="form-control"
+                id="description"
+                rows="3"
+              ></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-primary"
+              data-dismiss="modal"
+              style="border-radius: 0"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              style="border-radius: 0"
+            >
+              Update
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
     <!-- plugins:js -->
     <script src="../vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
@@ -371,6 +594,5 @@
     <script src="../js/dashboard.js"></script>
     <script src="../js/Chart.roundedBarCharts.js"></script>
     <!-- End custom js for this page-->
-</body>
-
+  </body>
 </html>

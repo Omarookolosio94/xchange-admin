@@ -2,6 +2,10 @@ function Redirect() {
   window.location.href = "../../template/Pages/Order_Single.html";
 }
 
+function RedirectUser() {
+  window.location.href = "../../template/Pages/Users_Single.html";
+}
+
 function RedirectInventory() {
   window.location.href = "../../template/Pages/Inventory_Single.html";
 }
@@ -63,7 +67,7 @@ $(document).ready(function () {
         var div;
         var total = val.unit_price * val.quantity;
         div =
-          "<tr> " +
+          "<tr onclick='RedirectInventory()'> " +
           "<td>" +
           val.product_id +
           "</td>" +
@@ -129,6 +133,48 @@ $(document).ready(function () {
       if (product.length > 0) {
         jQuery("#inventory-table").DataTable();
       }
+    },
+  });
+
+  $.ajax({
+    type: "GET",
+    url: "../../template/Data/Users.json",
+    success: function (result) {
+      var user = result;
+      var display = $("#users-list");
+
+      $.each(user, function (key, val) {
+        var div;
+        var name = val.firstName + " " + val.lastName;
+        div =
+          "<tr onclick='RedirectUser()'>" +
+          "<td>" +
+          val.user_id +
+          "</td>" +
+          "<td>" +
+          "<img src=" +
+          val.pic +
+          ">" +
+          "</td>" +
+          "<td>" +
+          name +
+          "</td>" +
+          "<td>" +
+          val.email +
+          "</td>" +
+          "<td>" +
+          val.number +
+          "</td>" +
+          "<td>" +
+          val.status +
+          "</td>" +
+          "<td>" +
+          val.date_created +
+          "</td>" +
+          "</tr>";
+
+        display.append(div);
+      });
     },
   });
 });
