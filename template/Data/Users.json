@@ -9,7 +9,7 @@
     "created_by": 12,
     "updated_by": 12,
     "role": "",
-    "pic": "../../template/images/faces/face1.jpg",
+    "pic": "../images/faces/face2.jpg",
     "status": "active",
     "remark": ""
 }, {
@@ -23,7 +23,7 @@
     "created_by": 12,
     "updated_by": 12,
     "role": "",
-    "pic": "../../template/images/faces/face1.jpg",
+    "pic": "../images/faces/face1.jpg",
     "status": "active",
     "remark": ""
 }]

@@ -4,20 +4,20 @@
     "user_name": "Oghenemaro Okolosio",
     "activity": "Added a new product",
     "date_added": "14 June 2021",
-    "pic": "../../template/images/faces/face1.jpg"
+    "pic": "../images/faces/face5.jpg"
 
 }, {
     "audit_id": 2,
     "user_id": 12,
-    "user_name": "Oghenemaro Okolosio",
-    "activity": "Added a new product",
+    "user_name": "Matt Damon",
+    "activity": "Deleted user #89",
     "date_added": "14 June 2021",
-    "pic": "../../template/images/faces/face1.jpg"
+    "pic": "../images/faces/face10.jpg"
 }, {
     "audit_id": 3,
     "user_id": 12,
-    "user_name": "Oghenemaro Okolosio",
-    "activity": "Added a new product",
+    "user_name": "John Doe",
+    "activity": "Approved order #225 for delivery",
     "date_added": "14 June 2021",
-    "pic": "../../template/images/faces/face1.jpg"
+    "pic": "../images/faces/face9.jpg"
 }]
