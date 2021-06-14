@@ -1,0 +1,23 @@
+[{
+    "audit_id": 1,
+    "user_id": 12,
+    "user_name": "Oghenemaro Okolosio",
+    "activity": "Added a new product",
+    "date_added": "14 June 2021",
+    "pic": "../../template/images/faces/face1.jpg"
+
+}, {
+    "audit_id": 2,
+    "user_id": 12,
+    "user_name": "Oghenemaro Okolosio",
+    "activity": "Added a new product",
+    "date_added": "14 June 2021",
+    "pic": "../../template/images/faces/face1.jpg"
+}, {
+    "audit_id": 3,
+    "user_id": 12,
+    "user_name": "Oghenemaro Okolosio",
+    "activity": "Added a new product",
+    "date_added": "14 June 2021",
+    "pic": "../../template/images/faces/face1.jpg"
+}]

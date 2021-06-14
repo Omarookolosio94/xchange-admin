@@ -1,0 +1,58 @@
+[{
+    "id": 1,
+    "orderId": "MARO_102",
+    "email": "omarookolosio94@gmail.com",
+    "phone_number": "07019069486",
+    "first_name": "Oghenemaro",
+    "last_name": "Okolosio",
+    "address": "48 Vaughan Street , Costain",
+    "city": "Ebute Metta",
+    "state": "Lagos",
+    "postal_code": "0981",
+    "product_ordered": [{
+        "product_id": 19,
+        "name": "PS4 Adapter",
+        "description": "Dual controller with shock absorber comes with a charger",
+        "unit_price": 3000,
+        "quantity": 2
+    }, {
+        "product_id": 19,
+        "name": "PS4 Adapter",
+        "description": "Dual controller with shock absorber comes with a charger",
+        "unit_price": 3000,
+        "quantity": 2
+    }],
+    "subtotal": 15000,
+    "tax": 0,
+    "delivery_price": 0,
+    "total": 15000,
+    "payment_type": "Cash on Delivery",
+    "status": "Pending",
+    "date_ordered": "12 June 2021",
+    "date_delivered": ""
+}, {
+    "id": 2,
+    "orderId": "DEV_09",
+    "email": "omarookolosio94@gmail.com",
+    "phone_number": "07019069486",
+    "first_name": "Oghenemaro",
+    "last_name": "Okolosio",
+    "address": "Ekpan , Uvwie",
+    "city": "Warri",
+    "state": "Nigeria",
+    "postal_code": "0981",
+    "item_ordered": [{
+        "item_id": 19,
+        "name": "PS4 Adapter",
+        "unit_price": 3000,
+        "quantity": 2
+    }],
+    "subtotal": 15000,
+    "tax": 0,
+    "delivery_price": 0,
+    "total": 15000,
+    "payment_type": "Cash on Delivery",
+    "status": "Pending",
+    "date_ordered": "10 June 2021",
+    "date_delivered": ""
+}]

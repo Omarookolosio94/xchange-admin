@@ -1,0 +1,29 @@
+[{
+    "user_id": 1,
+    "email": "omarookolosio@hotmail.com",
+    "firstName": "Oghenemaro",
+    "lastName": "Okolosio",
+    "number": "07019069486",
+    "date_created": "13 June 2021",
+    "last_updated": "13 June 2021",
+    "created_by": 12,
+    "updated_by": 12,
+    "role": "",
+    "pic": "../../template/images/faces/face1.jpg",
+    "status": "active",
+    "remark": ""
+}, {
+    "user_id": 2,
+    "email": "omarookolosio@hotmail.com",
+    "firstName": "Oghenemaro",
+    "lastName": "Okolosio",
+    "number": "07019069486",
+    "date_created": "13 June 2021",
+    "last_updated": "13 June 2021",
+    "created_by": 12,
+    "updated_by": 12,
+    "role": "",
+    "pic": "../../template/images/faces/face1.jpg",
+    "status": "active",
+    "remark": ""
+}]
